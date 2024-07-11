@@ -35,6 +35,7 @@ h2 {
 	font-weight: 300;
 
 }
+
 .quote-author {
 	font-weight: 800;
 	font-size: 22px;
@@ -79,8 +80,8 @@ h2 {
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
-    color: white; 
-    text-align: center;
+	color: white;
+	text-align: center;
 	padding: 5px;
 }
 
@@ -118,7 +119,7 @@ h2 {
 
 .portrait {
 	width: 100%;
-	height: 100%;	
+	height: 100%;
 }
 
 #about-me {
@@ -150,33 +151,43 @@ h2 {
 .gallery .nav {
 	justify-content: center;
 }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
 	background-color: #BEB45A;
 	border-radius:0 ;
+	cursor: pointer;
 }
+
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
+	cursor: pointer;
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
 	padding: 0;
 }
-.item-column::after{
+
+.item-column::after {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
 
 }
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	padding: .5em;
+	cursor: pointer;
 }
-.mg-prev, .mg-next {
+
+
+.mg-next, .mg-prev {
 	width: 30px;
 	height: 30px;
 	border-radius: 00%;
@@ -191,12 +202,12 @@ h2 {
 
 #services {
 	margin: auto;
-	background-color: #A8D5D8 ;
+	background-color: #A8D5D8;
 	position: relative;
-	
+
 }
 
-#services .container::before{
+#services .container::before {
 	content: ' ';
 	background-color: #1C6474;
 	position: absolute;
@@ -210,7 +221,7 @@ h2 {
 #services .container {
 	justify-content: space-between;
 	display: flex;
-	padding : 2em 0;
+	padding: 2em 0;
 
 }
 
@@ -228,7 +239,7 @@ h2 {
 
 #contact {
 	margin: auto;
-	background-color: #D8D3A8 ;
+	background-color: #D8D3A8;
 	position: relative;
 	padding-inline: 100px;
 	padding-block: 100px;
@@ -254,7 +265,7 @@ h2 {
 /* Form */
 
 .form-container {
-	flex : 2;
+	flex: 2;
 }
 
 form {
@@ -262,7 +273,7 @@ form {
 	flex-direction: column;
 	width: 70%;
 	align-items: flex-start;
-	
+
 }
 
 form input {
@@ -271,7 +282,7 @@ form input {
 	border: solid 1px;
 	height: 2.5em;
 	margin-bottom: 20px;
-	
+
 }
 
 .img-form {
@@ -295,31 +306,74 @@ input[type="submit"] {
 }
 
 
+/* Footer */
+footer {
+	background-color: #BEB45A;
+	padding: 20px;
+	text-align: center;
+	color: white;
+}
+
+.footer-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.footer-content p {
+	margin: 5px 0;
+}
+
+.footer-title {
+	margin-top: 1em;
+	font-size: 20px;
+	color: black;
+	padding-top: 10px;
+	text-align: center;
+
+}
+
+.footer-titles {
+	font-size: 15px;
+	font-weight: bolder;
+
+}
+
+i {
+	color: black;
+}
+
 /* Responsive */
 @media all and (max-width: 1180px) {
 	.picture {
-		flex : 2;
+		flex: 2;
 	}
-	#about, #contact .container {
+
+	#about,
+	#contact .container {
 		align-items: center;
 	}
+
 	.left-title {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+
+	#about-me h6,
+	#about-me p {
 		width: 100%;
 	}
 }
 
 @media all and (max-width: 1000px) {
-	#about{
+	#about {
 		flex-direction: column;
 
 	}
+
 	.picture {
 		width: 50%;
 	}
+
 	.picture.left::before {
 		width: 100%;
 		height: 30%;
@@ -329,24 +383,28 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
+
 	.left-title {
 		text-align: center;
 		margin-top: 1em;
 	}
+
 	#services .container {
 		flex-direction: column;
 	}
+
 	.service {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
 		margin: 2em 0
 	}
-	.service-description{
+
+	.service-description {
 		margin-bottom: 1em;
 	}
 
-	#services .container::before{
+	#services .container::before {
 		width: 30%;
 		height: 100%;
 		bottom: 0;
@@ -358,9 +416,11 @@ input[type="submit"] {
 	#contact .container {
 		flex-direction: column;
 	}
+
 	#contact .picture.right {
 		margin-top: 1em;
 	}
+
 	.picture.right::before {
 		width: 100%;
 		height: 30%;
@@ -376,33 +436,43 @@ input[type="submit"] {
 		flex-direction: column;
 		padding-inline: 0;
 	}
-	.top-header .nav, .top-header .nav ul {
+
+	.top-header .nav,
+	.top-header .nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
 	}
+
 	.top-header .nav li {
 		flex: 1;
 		padding-block: 1em;
 		text-align: center;
 	}
-	.picture.left::before, .picture.right::before {
+
+	.picture.left::before,
+	.picture.right::before {
 		height: 150px;
 	}
+
 	#services .container {
 		align-items: center;
 	}
+
 	.service {
 		max-width: 90%;
 	}
-	#about, #contact {
+
+	#about,
+	#contact {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
+
 	form {
 		width: 100%;
 	}
+
 	.picture {
 		width: 80%;
 	}
 }
-
