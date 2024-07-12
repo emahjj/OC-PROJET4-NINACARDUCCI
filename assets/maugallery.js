@@ -179,8 +179,6 @@
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
 
-
-
     
     nextImage() {
       let activeImage = null;
@@ -188,11 +186,6 @@
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
-
-
-
-
-
       });
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
@@ -224,6 +217,8 @@
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+
+
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${lightboxId ? lightboxId : "galleryLightbox"
         }" tabindex="-1" role="dialog" aria-hidden="true">
