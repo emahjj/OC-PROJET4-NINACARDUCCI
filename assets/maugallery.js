@@ -129,18 +129,13 @@
       $(`#${lightboxId}`).modal("toggle");
     },
 
-
-
-    prevImage() {
+    prevImage(element) {
       let activeImage = null;
       $("img.gallery-item").each(function () {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
       });
-
-
-
 
 
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
